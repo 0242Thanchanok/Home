@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IOTE Department</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<header>
+    <div class="top-bar">
+        <img src="images/logo.png" class="logo">
+
+        <div class="title-box">
+            <div class="title">
+                DEPARTMENT OF IOT AND<br>
+                INFORMATION ENGINEERING
+            </div>
+            <div class="subtitle">
+                King Mongkut's Institute of Technology Ladkrabang
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            🔍
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+ </div>
+  <!-- Navigation bar -->
+    <!-- Side Menu Overlay -->
+    <nav class="menu">
+        <a href="#" class="active">HOME</a>
+        <a href="#">ABOUT IOTE ▼</a>
+        <a href="#">ACADEMICS ▼</a>
+        <a href="#">ADMISSION ▼</a>
+        <a href="#">FACULTY ▼</a>
+        <a href="#">STUDENT SERVICES ▼</a>
+    </nav>
+     <div class="side-menu" id="menu">
+
+    <div class="menu-header">
+        <input type="text" placeholder="Search">
+        <span class="close-btn" onclick="toggleMenu()">✕</span>
+    </div>
+
+    <div class="menu-links">
+        <a href="#">HOME ></a>
+        <a href="#">ABOUT IOTE ></a>
+        <a href="#">ACADEMICS ></a>
+        <a href="#">ADMISSION ></a>
+        <a href="#">FACULTY ></a>
+        <a href="#">STUDENT SERVICES ></a>
+    </div>
+
+    <div class="menu-footer">
+        DEPARTMENT OF IOT AND<br>
+        INFORMATION ENGINEERING
+    </div>
+
+</div>
+
+</header>
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+<script>
+    // เปลี่ยน active ของเมนู
+    document.querySelectorAll('.menu a, .menu .dropdown').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.menu .active').forEach(el => {
+                el.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+</script>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="carousel">
+        <div class="slide active">
+            <a href="#contact">
+                <img src="images/slide1.png">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#news">
+                <img src="images/slide2.png">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="#curricula">
+                <img src="images/slide3.png">
+            </a>
+        </div>
+      <div class="slide">
+            <a href="#projects">
+                <img src="images/slide4.png">
+            </a>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<section class="curricula" id="curricula">
+    <div class="curricula-header">CURRICULA</div>
+
+    <div class="curricula-wrapper">
+
+        <!-- 1 -->
+        <div class="curricula-card">
+            <div class="icon-box"><img src="images/icon1.png"></div>
+            <h3>B.Eng (IoT System<br>and Information)</h3>
+            <a href="#"
+               class="learn-more"
+               data-title="B.Eng (IoT System and Information)"
+               data-name="วิศวกรรมศาสตรบัณฑิต (วิศวกรรมระบบไอโอทีและสารสนเทศ)"
+               data-level="ปริญญาตรี"
+               data-year="4 ปี">
+               Learn More →
+            </a>
+        </div>
+
+        <!-- 2 -->
+        <div class="curricula-card">
+            <div class="icon-box"><img src="images/icon2.png"></div>
+            <h3>DUAL DEGREE</h3>
+            <a href="#"
+               class="learn-more"
+               data-title="DUAL DEGREE"
+               data-name="หลักสูตรสองปริญญา วท.บ.ฟิสิกส์อุตสาหกรรม และ วศ.บ.วิศวกรรมระบบไอโอทีและสารสนเทศ"
+               data-level="ปริญญาตรี"
+               data-year="4 ปี">
+               Learn More →
+            </a>
+        </div>
+
+        <!-- 3 -->
+        <div class="curricula-card">
+            <div class="icon-box"><img src="images/icon3.png"></div>
+            <h3>B.Eng (Computer<br>and IoT)</h3>
+            <a href="#"
+               class="learn-more"
+               data-title="B.Eng (Computer and IoT)"
+               data-name="วิศวกรรมศาสตรบัณฑิต (คอมพิวเตอร์และไอโอที) หลักสูตรต่อเนื่อง"
+               data-level="ปริญญาตรี"
+               data-year="2 ปี">
+               Learn More →
+            </a>
+        </div>
+
+        <!-- 4 -->
+        <div class="curricula-card">
+            <div class="icon-box"><img src="images/icon4.png"></div>
+            <h3>M.Eng And Ph.D<br>(AIoT and Information)</h3>
+            <a href="#"
+               class="learn-more"
+               data-title="M.Eng And Ph.D (AIoT and Information)"
+               data-name="วิศวกรรมศาสตรมหาบัณฑิต และ ปรัชญาดุษฎีบัณฑิต (ไอโอทีและสารสนเทศ)"
+               data-level="ปริญญาโท และ ปริญญาเอก"
+               data-year="ปริญญาโท 2 ปี และ ปริญญาเอก 3-4 ปี">
+               Learn More →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SCHOLARSHIP -->
+<section class="scholarship-section">
+    <div class="scholarship-container">
+
+        <div class="scholarship-left">
+            <div class="image-grid">
+                <img src="images/camp1.png">
+                <img src="images/camp2.png">
+                <img src="images/camp3.png">
+                <img src="images/camp4.png">
+            </div>
+        </div>
+
+        <div class="scholarship-right">
+            <div class="scholarship-box">
+                <div class="scholarship-title">SCHOLARSHIP</div>
+
+                <a href="https://scholarship.kmitl.ac.th/"
+   class="scholarship-item"
+   target="_blank">
+
+    ระดับปริญญาตรี
+    <span class="arrow">▾</span>
+
+</a>
+
+                <a href="https://scholarship.kmitl.ac.th/"
+   class="scholarship-item"
+   target="_blank">
+
+    ระดับปริญญาโท
+    <span class="arrow">▾</span>
+
+</a><a href="hhttps://scholarship.kmitl.ac.th/"
+   class="scholarship-item"
+   target="_blank">
+
+    ระดับปริญญาเอก
+    <span class="arrow">▾</span>
+
+</a>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- NEWS -->
+<section class="news-section" id="news">
+
+    <div class="news-container">
+
+        <!-- LEFT -->
+        <div class="news-left">
+
+    <div class="news-tabs">
+        <button class="tab active" data-target="eduNews">ข่าวการศึกษา</button>
+        <button class="tab" data-target="prNews">ข่าวประชาสัมพันธ์</button>
+        <button class="tab" data-target="otherNews">ข่าวอื่นๆ</button>
+    </div>
+
+    <div class="news-list">
+
+    <!-- ================= ข่าวการศึกษา ================= -->
+    <div class="news-group" id="eduNews">
+
+        <div class="news-item">
+            <img src="images/news1.png">
+            <div class="news-content">
+                <h4>กำหนดการฝึกซ้อม พิธีพระราชทานปริญญาบัตรแก่ผู้สำเร็จการศึกษา 
+                    ประจำปีการศึกษา 2567 </h4>
+                <span class="date">🗓️ 07/01/26 - 08/01/26</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/news2.png">
+            <div class="news-content">
+                <h4>เปิดรับสมัคร TCAS รอบที่ 1 : Portfolio ปีการศึกษา 2569</h4>
+                <span class="date">🗓️ 22/12/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/news3.png">
+            <div class="news-content">
+                <h4>ขอแสดงความยินดีกับนักศึกษา ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ คณะวิศวกรรมศาสตร์</h4>
+                <span class="date">🗓️ 18/12/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/news4.png">
+            <div class="news-content">
+                <h4>เวทีแสดงผลงานพัฒนา ! IoT Innovation Day</h4>
+                <span class="date">🗓️ 04/11/25</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= ข่าวประชาสัมพันธ์ ================= -->
+    <div class="news-group" id="prNews" style="display:none;">
+
+        <div class="news-item">
+            <img src="images/pr1.png">
+            <div class="news-content">
+                <h4>ตารางกิจกรรมค่าย IoTE Camp</h4>
+                <span class="date">🗓️ 14/12/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/pr2.png">
+            <div class="news-content">
+                <h4>ค่ายสำหรับน้อง ๆ มัธยมศึกษาปีที่ 6 หรือเทียบเท่า ที่มีความสนใจในหลักสูตร</h4>
+                <span class="date">🗓️ 20/12/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/pr3.png">
+            <div class="news-content">
+                <h4>งานบรรยายสัมนาเชิงวิชาการในหัวข้อ Next Energy Era & Automation Driven</h4>
+                <span class="date">🗓️ 18/08/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/pr4.png">
+            <div class="news-content">
+                <h4>ขอเชิญเข้าร่วมสัมนาเชิงวิชาการ IoT in the Cooling System Business</h4>
+                <span class="date">🗓️ 06/10/25</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= ข่าวอื่นๆ ================= -->
+    <div class="news-group" id="otherNews" style="display:none;">
+
+        <div class="news-item">
+            <img src="images/other1.png">
+            <div class="news-content">
+                <h4>ขอแสดงความขอบคุณ ผู้อำนวยการอาวุโส</h4>
+                <span class="date">🗓️ 05/10/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/other2.png">
+            <div class="news-content">
+                <h4>ขอแสดงความยินดีกับบุคลากรที่ได้รับรางวัลในพิธีมอบรางวัล</h4>
+                <span class="date">🗓️ 26/08/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/other3.png">
+            <div class="news-content">
+                <h4>เชิญชวนน้อง ๆ เข้าร่วมกิจกรรมสนุก ๆจากภาควิชาวิศวกรรมไอโอทีและสารสนเทศ</h4>
+                <span class="date">🗓️ 30/07/25</span>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="images/other4.png">
+            <div class="news-content">
+                <h4>โฉมใหม่ของภาควิชา IoT</h4>
+                <span class="date">🗓️ 14/07/25</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+        <!-- RIGHT -->
+        <div class="news-right">
+
+            <a href="https://youtu.be/Dt725fs-50g?si=8l5X01SK4L5ODfAk"
+   target="_blank"
+   class="video-card">
+
+    <div class="video-title">ABOUT IOT</div>
+    <img src="images/video1.png">
+
+</a>
+
+            <a href="https://youtu.be/43ASh8ygJG8?si=RRFjArjC5IJEI3u5"
+   target="_blank"
+   class="video-card">
+
+    <div class="video-title">ABOUT PHYSIOT</div>
+    <img src="images/video3.png">
+
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ย้ายปุ่มออกมา -->
+<div class="news-bottom-wrapper">
+    <div class="news-bottom">
+       
+        <button class="view-btn">VIEW ALL NEWS</button>
+    </div>
+     
+
+<div class="bottom-dark-bar"></div>
+</div>
+
+<section class="projects-section" id="projects">
+
+    <div class="projects-header">
+        Outstanding projects
+    </div>
+
+    <div class="projects-wrapper">
+
+        <!-- ปุ่มซ้าย -->
+        <button class="project-prev">&#10094;</button>
+
+        <!-- Viewport -->
+        <div class="projects-viewport">
+            <div class="projects-track">
+
+                <!-- 1 -->
+                <div class="project-card">
+                    <img src="images/project1.png">
+                    <h4>AI Engineer Season 5</h4>
+                    <p>
+                    คว้ารางวัล เหรียญทองแดง  จากโครงการ Super AI Engineer Season 5 
+                    โครงการความร่วมมือระหว่าง สมาคมปัญญาประดิษฐ์ประเทศไทย 
+                    </p>
+                </div>
+                
+
+                <!-- 2 -->
+                <div class="project-card">
+                    <img src="images/project2.png">
+                    <h4>Safety Cap</h4>
+                    <p>
+                    หมวกที่มาพร้อมกับเซนเซอร์ตรวจจับความเร่งแบบ 3 แกน 
+                    และชุดหลอดไฟ LED เพื่อความปลอดภัยบนท้องถนนของคุณและคนรอบตัว
+                    </p>
+                </div>
+
+                <!-- 3 -->
+                <div class="project-card">
+                    <img src="images/project3.png">
+                    <h4>AI & Robotics Hackathon</h4>
+                    <p>
+                        ได้รับรางวัล รองชนะเลิศอันดับ 1 จากการแข่งขันAI & Robotics Hackathon and 
+                        Competitions 2025 by the MIT Media Lab & Bangkok Bank
+                    </p>
+                </div>
+
+                <!-- 4 -->
+                <div class="project-card">
+                    <img src="images/project4.png">
+                    <h4>GHB Open Innovation Hackathon</h4>
+                    <p>
+                        แข่งขันภายใต้หัวข้อ The Future of Finance with GHB 
+                        ได้รับรางวัลรองชนะเลิศอันดับ 1 จำนวนเงิน 40,000 บาท
+                    </p>
+                </div>
+
+                <!-- 5 -->
+                <div class="project-card">
+                    <img src="images/project5.png">
+                    <h4>Measurement Multimeter</h4>
+                    <p>
+                        อุปกรณ์วัดค่าที่สามารถวัดค่าได้หลาก
+หลาย ตั้งแต่อุณหภูมิไปจนถึงปริมาณแก๊ส LPG ในรูปแบบที่ไม่เหมือนใคร
+                    </p>
+                </div>
+
+                <!-- 6 -->
+                <div class="project-card">
+                    <img src="images/project6.png">
+                    <h4>TESA Topgun Rally</h4>
+                    <p>
+                        ได้รับรางวัลในการแข่งขันประชันสมองกลฝังตัว TESA Topgun Rally 
+                        ได้รับโล่รางวัลและเงินรางวัล 10,000 บาท
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ปุ่มขวา -->
+        <button class="project-next">&#10095;</button>
+
+    </div>
+    <div class="bottom-orange-bar"></div>
+
+    <section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+            <div class="contact-header">
+                <h2>CONTACT</h2>
+                <div class="contact-line"></div>
+            </div>
+
+            <h3>DEPARTMENT OF IOT AND<br>INFORMATION ENGINEERING</h3>
+
+            <p>
+                ชั้น 12 อาคารเรียนรวม 12 ชั้น (ตึกโหล)<br>
+                คณะวิศวกรรมศาสตร์<br>
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง<br>
+                กรุงเทพมหานคร 10520
+            </p>
+
+            <div class="contact-info">
+                <strong>Email</strong>
+                <p>iote@kmitl.ac.th</p>
+
+                <strong>Tel</strong>
+                <p>02 723 4900</p>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-right">
+
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <img src="images/building.jpg" alt="Building">
+
+            <a href="https://www.google.com/maps/place/%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%82%E0%B8%AB%E0%B8%A5/@13.7275475,100.7710245,18z/data=!3m1!4b1!4m6!3m5!1s0x311d678ac259764f:0xabeebe57c8c9903e!8m2!3d13.7275475!4d100.772312!16s%2Fg%2F11gl0bkrtg?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+   class="map-btn"
+   target="_blank">
+   GOOGLE MAPS
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= CURRICULUM POPUP ================= -->
+<!-- ================= CURRICULUM POPUP ================= -->
+<div class="curriculum-popup" id="curriculumPopup">
+
+    <div class="popup-card">
+
+        <button class="popup-close" id="popupClose">✕</button>
+
+        <h2 class="popup-main-title" id="popupTitle"></h2>
+
+        <div class="popup-content">
+
+            <p>
+                <span class="label">ชื่อหลักสูตร</span>
+                <span class="highlight" id="popupName"></span>
+            </p>
+
+            <p>
+                <span class="label">ระดับ</span>
+                <span class="highlight" id="popupLevel"></span>
+            </p>
+
+            <p>
+                <span class="label">ระยะเวลาเรียน</span>
+                <span class="highlight" id="popupYear"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= ALL NEWS POPUP ================= -->
+<div class="allnews-popup" id="allNewsPopup">
+
+    <div class="allnews-card">
+
+        <button class="allnews-close" id="allNewsClose">✕</button>
+
+        <div class="allnews-list" id="allNewsList">
+            <!-- เดี๋ยว JS จะ clone ข่าวทั้งหมดมาใส่ตรงนี้ -->
+        </div>
+
+    </div>
+
+</div>
+
+<script src="code.js"></script>
+</body>
+</html>
+
+
+
+
